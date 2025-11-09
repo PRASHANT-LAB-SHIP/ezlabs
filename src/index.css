@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* base page texture and typography */
+:root {
+  --bg-pattern: url('/pattern.png');
+}
+
+/* Global body styles */
+body {
+  @apply bg-vf-beige text-[#0b2545] font-body;
+  background-image: var(--bg-pattern);
+  background-repeat: repeat;
+  background-size: 240px;
+}
+
+/* hero mandala placeholder */
+.mandala {
+  background-image: url('/mandala.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+/* decorative border bottom like figma lace */
+.lace {
+  background-image: url('/lace.png');
+  background-repeat: repeat-x;
+  background-position: bottom;
+}
+
+/* small reusable classes */
+.btn-primary {
+  @apply inline-block px-5 py-2 rounded-full bg-[#d97706] text-white shadow-md hover:brightness-95 transition;
+}
+
+.polaroid {
+  @apply bg-white p-2 rounded shadow-lg;
+}
+
+/* responsive text tweaks */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 1.75rem;
+  }
+}
